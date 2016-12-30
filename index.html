@@ -26,10 +26,12 @@
         iceCream.style.visibility = 'hidden';
 
         element.addEventListener('click', function () {
-            if (text.value === "YES" || text.value === 'Yes' || text.value === 'yes' || text.value === 'okay') {
+            if (text.value === "YES" || text.value === 'Yes' || text.value === 'yes' || text.value === 'okay' ||
+                text.value === "YES." || text.value === 'Yes.' || text.value === 'yes.' || text.value ===
+                'okay.') {
                 input.style.display = 'none';
                 iceCream.style.visibility = 'visible'
-            }else{
+            } else {
                 text.value = "Try Again!";
                 text.style.color = "red";
             }
