@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>To Innaya</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,700" rel="stylesheet">
+</head>
+
+<body>
+    <div class="root" id="rootId">
+        <h2>Do you want <b>Ice Cream</b>?</h2>
+        <input type="text" placeholder="Something might melt!">
+        <button id="send">Send</button>
+    </div>
+    <div class="imgContainer">
+        <img src="ice-cream.svg" alt="Ice Cream for Innaya" id="image">
+    </div>
+    <script>
+        var element = document.getElementById('send');
+        var input = document.getElementById("rootId");
+        var iceCream = document.getElementById("image");
+        iceCream.style.visibility = 'hidden';
+
+        element.addEventListener('click', function () {
+            input.style.display = 'none';
+            iceCream.style.visibility = 'visible'
+        });
+    </script>
+</body>
+
+</html>
