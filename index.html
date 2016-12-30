@@ -10,8 +10,8 @@
 
 <body>
     <div class="root" id="rootId">
-        <h2>Do you want <b>Ice Cream</b>?</h2>
-        <input type="text" placeholder="Something might melt!">
+        <h2 class="animated bounce"> Do you want <b>Ice Cream</b>?</h2>
+        <input type="text" placeholder="Something might melt!" id="input">
         <button id="send">Send</button>
     </div>
     <div class="imgContainer">
@@ -21,11 +21,18 @@
         var element = document.getElementById('send');
         var input = document.getElementById("rootId");
         var iceCream = document.getElementById("image");
+        var text = document.getElementById("input");
+
         iceCream.style.visibility = 'hidden';
 
         element.addEventListener('click', function () {
-            input.style.display = 'none';
-            iceCream.style.visibility = 'visible'
+            if (text.value === "YES" || text.value === 'Yes' || text.value === 'yes' || text.value === 'okay') {
+                input.style.display = 'none';
+                iceCream.style.visibility = 'visible'
+            }else{
+                text.value = "Try Again!";
+                text.style.color = "red";
+            }
         });
     </script>
 </body>
